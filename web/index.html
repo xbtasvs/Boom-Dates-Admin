@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    Fore more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+  -->
+    <base href="/">
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="Flutter Dating App Admin Panel">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Flutter Dating App Admin Panel">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>Flutter Dating App Admin Panel</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <!-- The Firebase Core SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+    <!-- Firebase Analytics SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+    <!-- Firebase Firestore SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+    <!-- Firebase Messaging SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-messaging.js"></script>
+
+    <!-- Firebase project configuration -->
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "XXXXXXXXXXXXXXXXXXXXXXXXXX",
+            authDomain: "XXXXXXXXXXXXXXXXXXXXXXXXXX",
+            projectId: "XXXXXXXXXXXXXXXXXXXXXXXXXX",
+            storageBucket: "XXXXXXXXXXXXXXXXXXXXXXXXXX",
+            messagingSenderId: "XXXXXXXXXXXXXXXXXXXXXXXXXX",
+            appId: "XXXXXXXXXXXXXXXXXXXXXXXXXX",
+            measurementId: "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('flutter-first-frame', function() {
+                navigator.serviceWorker.register('flutter_service_worker.js');
+            });
+        }
+    </script>
+    <!-- Override the web renderer at runtime: -->
+    <script type="text/javascript">
+        // Set your option below
+        let useHtml = true;
+        // Check the option value
+        if (useHtml) {
+            window.flutterWebRenderer = "html";
+        } else {
+            window.flutterWebRenderer = "canvaskit";
+        }
+    </script>
+
+    <script src="main.dart.js" type="application/javascript"></script>
+</body>
+
+</html>
