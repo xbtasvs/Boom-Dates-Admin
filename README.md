@@ -1,4 +1,4 @@
-# dating_app_dashboard
+# boom_dates_dashboard
 
 A new Flutter project.
 

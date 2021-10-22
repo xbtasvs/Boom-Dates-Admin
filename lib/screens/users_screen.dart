@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dating_app_dashboard/constants/constants.dart';
-import 'package:dating_app_dashboard/datas/user.dart';
-import 'package:dating_app_dashboard/models/app_model.dart';
-import 'package:dating_app_dashboard/screens/user_profile.dart';
-import 'package:dating_app_dashboard/widgets/user_status.dart';
+import 'package:boom_dates_dashboard/constants/constants.dart';
+import 'package:boom_dates_dashboard/datas/user.dart';
+import 'package:boom_dates_dashboard/models/app_model.dart';
+import 'package:boom_dates_dashboard/screens/user_profile.dart';
+import 'package:boom_dates_dashboard/widgets/user_status.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -217,7 +217,7 @@ class UserDataTableSource extends DataTableSource {
     if (userId.length < 10) {
       return userId;
     } else {
-      final newUserId = userId.substring(0,10);
+      final newUserId = userId.substring(0, 10);
       return '$newUserId...';
     }
   }

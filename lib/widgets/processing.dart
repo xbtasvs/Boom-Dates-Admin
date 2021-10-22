@@ -1,4 +1,4 @@
-import 'package:dating_app_dashboard/widgets/my_circular_progress.dart';
+import 'package:boom_dates_dashboard/widgets/my_circular_progress.dart';
 import 'package:flutter/material.dart';
 
 class Processing extends StatelessWidget {

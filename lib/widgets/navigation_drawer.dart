@@ -1,13 +1,13 @@
-import 'package:dating_app_dashboard/constants/constants.dart';
-import 'package:dating_app_dashboard/screens/admin_profile.dart';
-import 'package:dating_app_dashboard/screens/app_settings.dart';
-import 'package:dating_app_dashboard/screens/dashboard.dart';
-import 'package:dating_app_dashboard/screens/flagged_users.dart';
-import 'package:dating_app_dashboard/screens/in_app_purchases.dart';
-import 'package:dating_app_dashboard/screens/push_notifications.dart';
-import 'package:dating_app_dashboard/screens/sign_in_screen.dart';
-import 'package:dating_app_dashboard/screens/users_screen.dart';
-import 'package:dating_app_dashboard/widgets/app_logo.dart';
+import 'package:boom_dates_dashboard/constants/constants.dart';
+import 'package:boom_dates_dashboard/screens/admin_profile.dart';
+import 'package:boom_dates_dashboard/screens/app_settings.dart';
+import 'package:boom_dates_dashboard/screens/dashboard.dart';
+import 'package:boom_dates_dashboard/screens/flagged_users.dart';
+import 'package:boom_dates_dashboard/screens/in_app_purchases.dart';
+import 'package:boom_dates_dashboard/screens/push_notifications.dart';
+import 'package:boom_dates_dashboard/screens/sign_in_screen.dart';
+import 'package:boom_dates_dashboard/screens/users_screen.dart';
+import 'package:boom_dates_dashboard/widgets/app_logo.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawer extends StatelessWidget {
@@ -72,8 +72,8 @@ class NavigationDrawer extends StatelessWidget {
             title: Text("In-App Purchases", style: _menuTextStyle),
             onTap: () {
               // Go to In-App Purchases screen
-              Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context) => InAppPurchases()));
+              Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (context) => InAppPurchases()));
             },
           ),
           Divider(height: 0),
@@ -82,8 +82,8 @@ class NavigationDrawer extends StatelessWidget {
             title: Text("Push Notifications", style: _menuTextStyle),
             onTap: () {
               // Go to push notifications screen
-              Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context) => PushNotifications()));
+              Navigator.of(context).push(new MaterialPageRoute(
+                  builder: (context) => PushNotifications()));
             },
           ),
           Divider(height: 0),
@@ -93,7 +93,7 @@ class NavigationDrawer extends StatelessWidget {
             onTap: () {
               // Go to admin account screen
               Navigator.of(context).push(
-                new MaterialPageRoute(builder: (context) => AdminProfile()));
+                  new MaterialPageRoute(builder: (context) => AdminProfile()));
             },
           ),
           Divider(height: 0),
@@ -103,7 +103,7 @@ class NavigationDrawer extends StatelessWidget {
             onTap: () {
               // Go to sign in screen
               Navigator.of(context).pushReplacement(
-                new MaterialPageRoute(builder: (context) => SignInScreen()));
+                  new MaterialPageRoute(builder: (context) => SignInScreen()));
             },
           ),
         ],

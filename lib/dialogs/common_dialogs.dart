@@ -1,7 +1,5 @@
-
-import 'package:dating_app_dashboard/widgets/default_card_border.dart';
+import 'package:boom_dates_dashboard/widgets/default_card_border.dart';
 import 'package:flutter/material.dart';
-
 
 /// Success Dialog
 void successDialog(
@@ -171,8 +169,7 @@ void _buildDialog(
             /// Positive button
             TextButton(
                 onPressed: positiveAction ?? () => Navigator.of(context).pop(),
-                child: Text(positiveText ?? "OK",
-                    style: _textStyle)),
+                child: Text(positiveText ?? "OK", style: _textStyle)),
           ],
         );
       });

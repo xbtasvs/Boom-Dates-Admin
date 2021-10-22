@@ -1,7 +1,7 @@
-import 'package:dating_app_dashboard/models/app_model.dart';
-import 'package:dating_app_dashboard/widgets/default_button.dart';
-import 'package:dating_app_dashboard/widgets/default_card_border.dart';
-import 'package:dating_app_dashboard/widgets/show_scaffold_msg.dart';
+import 'package:boom_dates_dashboard/models/app_model.dart';
+import 'package:boom_dates_dashboard/widgets/default_button.dart';
+import 'package:boom_dates_dashboard/widgets/default_card_border.dart';
+import 'package:boom_dates_dashboard/widgets/show_scaffold_msg.dart';
 import 'package:flutter/material.dart';
 
 class AdminProfile extends StatefulWidget {
@@ -117,25 +117,27 @@ class _AdminProfileState extends State<AdminProfile> {
                             onPressed: () {
                               /// Validate form
                               if (_formKey.currentState!.validate()) {
-                                  // Update admin sign in info
-                                  AppModel().updateAdminSignInInfo(
-                                    adminUsername: _usernameController.text.trim(), 
-                                    adminPassword: _passController.text.trim(), 
+                                // Update admin sign in info
+                                AppModel().updateAdminSignInInfo(
+                                    adminUsername:
+                                        _usernameController.text.trim(),
+                                    adminPassword: _passController.text.trim(),
                                     onSuccess: () {
                                       // Show success message
                                       showScaffoldMessage(
                                           context: context,
                                           scaffoldkey: _scaffoldKey,
-                                          message: "Admin sign in info updated successfully!");
-                                    }, 
+                                          message:
+                                              "Admin sign in info updated successfully!");
+                                    },
                                     onError: () {
                                       // Show error message
                                       showScaffoldMessage(
                                           context: context,
                                           scaffoldkey: _scaffoldKey,
-                                          message: "Error while updating Admin sign in info.\nPlease try again later!");
-                                    }
-                                );
+                                          message:
+                                              "Error while updating Admin sign in info.\nPlease try again later!");
+                                    });
                               }
                             },
                           ),

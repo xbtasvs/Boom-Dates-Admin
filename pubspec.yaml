@@ -1,5 +1,5 @@
-name: dating_app_dashboard
-description: Flutter Dating App Admin Panel
+name: boom_dates_dashboard
+description: Boom Dates App Admin Panel
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.

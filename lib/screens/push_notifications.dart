@@ -1,8 +1,8 @@
-import 'package:dating_app_dashboard/dialogs/progress_dialog.dart';
-import 'package:dating_app_dashboard/models/app_model.dart';
-import 'package:dating_app_dashboard/widgets/default_button.dart';
-import 'package:dating_app_dashboard/widgets/default_card_border.dart';
-import 'package:dating_app_dashboard/widgets/show_scaffold_msg.dart';
+import 'package:boom_dates_dashboard/dialogs/progress_dialog.dart';
+import 'package:boom_dates_dashboard/models/app_model.dart';
+import 'package:boom_dates_dashboard/widgets/default_button.dart';
+import 'package:boom_dates_dashboard/widgets/default_card_border.dart';
+import 'package:boom_dates_dashboard/widgets/show_scaffold_msg.dart';
 import 'package:flutter/material.dart';
 
 class PushNotifications extends StatefulWidget {
@@ -72,38 +72,40 @@ class _PushNotificationsState extends State<PushNotifications> {
                           },
                         ),
                         SizedBox(height: 20),
+
                         ///Send message button
                         SizedBox(
                           width: double.maxFinite,
                           child: DefaultButton(
-                            child:
-                                Text("Send message", style: TextStyle(fontSize: 18)),
+                            child: Text("Send message",
+                                style: TextStyle(fontSize: 18)),
                             onPressed: () async {
                               /// Validate form
                               if (_formKey.currentState!.validate()) {
-                                  // instance
-                                  final _pr = ProgressDialog(context); 
-                                   // Show processing dialog
-                                  _pr.show("Sending...");
+                                // instance
+                                final _pr = ProgressDialog(context);
+                                // Show processing dialog
+                                _pr.show("Sending...");
 
-                                 // Send push notifications to all users
-                                 await AppModel().sendPushNotification(
-                                   nBody: _messageController.text.trim(), 
-                                   onSuccess: () {
+                                // Send push notifications to all users
+                                await AppModel().sendPushNotification(
+                                    nBody: _messageController.text.trim(),
+                                    onSuccess: () {
                                       // Show success message
                                       showScaffoldMessage(
                                           context: context,
                                           scaffoldkey: _scaffoldKey,
-                                          message: "Push Notification Sent successfully!");
-                                   }, 
-                                   onError: () {
+                                          message:
+                                              "Push Notification Sent successfully!");
+                                    },
+                                    onError: () {
                                       // Show error message
                                       showScaffoldMessage(
                                           context: context,
                                           scaffoldkey: _scaffoldKey,
-                                          message: "Error while sending push notification!\nPlease try again later.");
-                                   }
-                                );
+                                          message:
+                                              "Error while sending push notification!\nPlease try again later.");
+                                    });
                                 // close progress
                                 _pr.hide();
                                 // Clear text

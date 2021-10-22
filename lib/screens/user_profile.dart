@@ -1,9 +1,9 @@
-import 'package:dating_app_dashboard/constants/constants.dart';
-import 'package:dating_app_dashboard/datas/user.dart';
-import 'package:dating_app_dashboard/dialogs/common_dialogs.dart';
-import 'package:dating_app_dashboard/models/app_model.dart';
-import 'package:dating_app_dashboard/widgets/show_scaffold_msg.dart';
-import 'package:dating_app_dashboard/widgets/user_status.dart';
+import 'package:boom_dates_dashboard/constants/constants.dart';
+import 'package:boom_dates_dashboard/datas/user.dart';
+import 'package:boom_dates_dashboard/dialogs/common_dialogs.dart';
+import 'package:boom_dates_dashboard/models/app_model.dart';
+import 'package:boom_dates_dashboard/widgets/show_scaffold_msg.dart';
+import 'package:boom_dates_dashboard/widgets/user_status.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:timeago/timeago.dart' as timeago;

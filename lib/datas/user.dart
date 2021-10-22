@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dating_app_dashboard/constants/constants.dart';
+import 'package:boom_dates_dashboard/constants/constants.dart';
 
 class User {
   /// User info
@@ -27,38 +27,38 @@ class User {
   final int userTotalLikes;
   final int userTotalVisits;
   final int userTotalDisliked;
-  final Map<String ,dynamic>? userGallery;
+  final Map<String, dynamic>? userGallery;
   final Map<String, dynamic> userSettings;
 
   // Constructor
   User({
-      required this.userId,
-      required this.userProfilePhoto,
-      required this.userFullname,
-      required this.userGender,
-      required this.userBirthDay,
-      required this.userBirthMonth,
-      required this.userBirthYear,
-      required this.userSchool,
-      required this.userJobTitle,
-      required this.userBio,
-      required this.userPhoneNumber,
-      required this.userEmail,
-      required this.userGallery,
-      required this.userCountry,
-      required this.userLocality,
-      required this.userGeoPoint,
-      required this.userSettings,
-      required this.userStatus,
-      required this.userIsVerified,
-      required this.userLevel, 
-      required this.userRegDate, 
-      required this.userLastLogin, 
-      required this.userDeviceToken,
-      required this.userTotalLikes, 
-      required this.userTotalVisits, 
-      required this.userTotalDisliked, 
-      });
+    required this.userId,
+    required this.userProfilePhoto,
+    required this.userFullname,
+    required this.userGender,
+    required this.userBirthDay,
+    required this.userBirthMonth,
+    required this.userBirthYear,
+    required this.userSchool,
+    required this.userJobTitle,
+    required this.userBio,
+    required this.userPhoneNumber,
+    required this.userEmail,
+    required this.userGallery,
+    required this.userCountry,
+    required this.userLocality,
+    required this.userGeoPoint,
+    required this.userSettings,
+    required this.userStatus,
+    required this.userIsVerified,
+    required this.userLevel,
+    required this.userRegDate,
+    required this.userLastLogin,
+    required this.userDeviceToken,
+    required this.userTotalLikes,
+    required this.userTotalVisits,
+    required this.userTotalDisliked,
+  });
 
   /// factory user object
   factory User.fromDocument(Map<String, dynamic> doc) {
@@ -82,13 +82,13 @@ class User {
       userSettings: doc[USER_SETTINGS],
       userStatus: doc[USER_STATUS],
       userIsVerified: doc[USER_IS_VERIFIED] ?? false,
-      userLevel: doc[USER_LEVEL], 
+      userLevel: doc[USER_LEVEL],
       userRegDate: doc[USER_REG_DATE].toDate(), // Firestore Timestamp
       userLastLogin: doc[USER_LAST_LOGIN].toDate(), // Firestore Timestamp
-      userDeviceToken: doc[USER_DEVICE_TOKEN] ?? '', 
-      userTotalLikes: doc[USER_TOTAL_LIKES] ?? 0, 
-      userTotalVisits: doc[USER_TOTAL_VISITS] ?? 0, 
-      userTotalDisliked: doc[USER_TOTAL_DISLIKED] ?? 0, 
+      userDeviceToken: doc[USER_DEVICE_TOKEN] ?? '',
+      userTotalLikes: doc[USER_TOTAL_LIKES] ?? 0,
+      userTotalVisits: doc[USER_TOTAL_VISITS] ?? 0,
+      userTotalDisliked: doc[USER_TOTAL_DISLIKED] ?? 0,
     );
   }
 }

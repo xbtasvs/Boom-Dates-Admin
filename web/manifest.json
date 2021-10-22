@@ -1,15 +1,14 @@
 {
-    "name": "dating_app_dashboard",
-    "short_name": "dating_app_dashboard",
+    "name": "boom_dates_dashboard",
+    "short_name": "boom_dates_dashboard",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Flutter Dating App Admin Panel",
+    "description": "Boom Dates Admin Panel",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
-    "icons": [
-        {
+    "icons": [{
             "src": "icons/Icon-192.png",
             "sizes": "192x192",
             "type": "image/png"

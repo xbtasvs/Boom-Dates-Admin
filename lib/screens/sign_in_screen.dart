@@ -1,12 +1,11 @@
-import 'package:dating_app_dashboard/constants/constants.dart';
-import 'package:dating_app_dashboard/models/app_model.dart';
-import 'package:dating_app_dashboard/screens/dashboard.dart';
-import 'package:dating_app_dashboard/widgets/app_logo.dart';
-import 'package:dating_app_dashboard/widgets/default_button.dart';
-import 'package:dating_app_dashboard/widgets/default_card_border.dart';
-import 'package:dating_app_dashboard/widgets/show_scaffold_msg.dart';
+import 'package:boom_dates_dashboard/constants/constants.dart';
+import 'package:boom_dates_dashboard/models/app_model.dart';
+import 'package:boom_dates_dashboard/screens/dashboard.dart';
+import 'package:boom_dates_dashboard/widgets/app_logo.dart';
+import 'package:boom_dates_dashboard/widgets/default_button.dart';
+import 'package:boom_dates_dashboard/widgets/default_card_border.dart';
+import 'package:boom_dates_dashboard/widgets/show_scaffold_msg.dart';
 import 'package:flutter/material.dart';
-
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -44,8 +43,8 @@ class _SignInScreenState extends State<SignInScreen> {
 
                     /// App name
                     Text(APP_NAME,
-                        style:
-                            TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center),
                     SizedBox(height: 20),
                     Text("Sign in with your username and password",
@@ -90,12 +89,14 @@ class _SignInScreenState extends State<SignInScreen> {
                               ),
                               labelText: "Password",
                               hintText: "Enter your password",
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              floatingLabelBehavior:
+                                  FloatingLabelBehavior.always,
                               prefixIcon: Icon(Icons.lock_outline),
                               suffixIcon: IconButton(
                                   icon: Icon(Icons.remove_red_eye),
                                   onPressed: () {
-                                    setState(() => _obscurePass = !_obscurePass);
+                                    setState(
+                                        () => _obscurePass = !_obscurePass);
                                   }),
                             ),
                             obscureText: _obscurePass,
@@ -112,33 +113,33 @@ class _SignInScreenState extends State<SignInScreen> {
                           SizedBox(
                             width: double.maxFinite,
                             child: DefaultButton(
-                              child:
-                                  Text("Sign In", style: TextStyle(fontSize: 18)),
+                              child: Text("Sign In",
+                                  style: TextStyle(fontSize: 18)),
                               onPressed: () {
                                 /// Validate form
                                 if (_formKey.currentState!.validate()) {
-
-                                    // Admin sign in 
-                                    AppModel().adminSignIn(
-                                      username: _usernameController.text.trim(), 
-                                      password: _passController.text.trim(), 
+                                  // Admin sign in
+                                  AppModel().adminSignIn(
+                                      username: _usernameController.text.trim(),
+                                      password: _passController.text.trim(),
                                       onSuccess: () {
                                         /// Go to dashboard
                                         Future(() {
                                           Navigator.of(context).pushReplacement(
-                                            new MaterialPageRoute(
-                                              builder: (context) => Dashboard()));
+                                              new MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Dashboard()));
                                         });
-                                      }, 
+                                      },
                                       onError: () {
                                         // Show error message
                                         showScaffoldMessage(
                                             context: context,
                                             scaffoldkey: _scaffoldKey,
                                             bgcolor: Colors.black,
-                                            message: "Username or Password is invalid.\nPlease try again!");
-                                      }
-                                  );
+                                            message:
+                                                "Username or Password is invalid.\nPlease try again!");
+                                      });
                                 }
                               },
                             ),

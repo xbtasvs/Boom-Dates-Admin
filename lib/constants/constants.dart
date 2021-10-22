@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 /// APP INFO CONSTANTS ///
 ///
-const String APP_NAME = "Flutter Dating App Admin Panel";
+const String APP_NAME = "Boom Dates Admin Panel";
 const Color APP_PRIMARY_COLOR = Colors.pink;
 const Color APP_ACCENT_COLOR = Colors.pinkAccent;
 

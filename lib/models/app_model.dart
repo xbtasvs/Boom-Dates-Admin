@@ -2,12 +2,11 @@ import 'dart:convert';
 import 'package:intl/intl.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dating_app_dashboard/constants/constants.dart';
-import 'package:dating_app_dashboard/datas/app_info.dart';
+import 'package:boom_dates_dashboard/constants/constants.dart';
+import 'package:boom_dates_dashboard/datas/app_info.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'package:http/http.dart' as http;
-
 
 class AppModel extends Model {
   // Variables

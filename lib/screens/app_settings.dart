@@ -1,7 +1,7 @@
-import 'package:dating_app_dashboard/models/app_model.dart';
-import 'package:dating_app_dashboard/widgets/app_version_control.dart';
-import 'package:dating_app_dashboard/widgets/default_button.dart';
-import 'package:dating_app_dashboard/widgets/show_scaffold_msg.dart';
+import 'package:boom_dates_dashboard/models/app_model.dart';
+import 'package:boom_dates_dashboard/widgets/app_version_control.dart';
+import 'package:boom_dates_dashboard/widgets/default_button.dart';
+import 'package:boom_dates_dashboard/widgets/show_scaffold_msg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -83,7 +83,6 @@ class _AppSettingsState extends State<AppSettings> {
     print('_decrementAndroidVersion() -> $_androidCurrentVersion');
   }
 
-
 // Increment iOS App version number
   void _incrementIOSversion() {
     // Update UI
@@ -117,23 +116,21 @@ class _AppSettingsState extends State<AppSettings> {
               children: [
                 // Android Version Control
                 AppVersionControl(
-                  title: 'Android App Version Control',
-                  subtitle: 'Google Play - App Current Version Number',
-                  appVersion: _androidCurrentVersion,
-                  onDecrement: _decrementAndroidVersion,
-                  onIncrement: _incrementAndroidVersion
-                ),
+                    title: 'Android App Version Control',
+                    subtitle: 'Google Play - App Current Version Number',
+                    appVersion: _androidCurrentVersion,
+                    onDecrement: _decrementAndroidVersion,
+                    onIncrement: _incrementAndroidVersion),
 
                 SizedBox(width: 20),
 
                 // iOS App Version Control
                 AppVersionControl(
-                  title: 'iOS App Version Control',
-                  subtitle: 'App Store - Current Version Number',
-                  appVersion: _iosCurrentVersion,
-                  onDecrement: _decrementIOSversion,
-                  onIncrement: _incrementIOSversion
-                ),
+                    title: 'iOS App Version Control',
+                    subtitle: 'App Store - Current Version Number',
+                    appVersion: _iosCurrentVersion,
+                    onDecrement: _decrementIOSversion,
+                    onIncrement: _incrementIOSversion),
               ],
             ),
             SizedBox(height: 25),

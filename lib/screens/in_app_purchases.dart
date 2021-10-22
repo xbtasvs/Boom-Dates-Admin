@@ -1,8 +1,8 @@
-import 'package:dating_app_dashboard/constants/constants.dart';
-import 'package:dating_app_dashboard/dialogs/common_dialogs.dart';
-import 'package:dating_app_dashboard/models/app_model.dart';
-import 'package:dating_app_dashboard/widgets/default_card_border.dart';
-import 'package:dating_app_dashboard/widgets/show_scaffold_msg.dart';
+import 'package:boom_dates_dashboard/constants/constants.dart';
+import 'package:boom_dates_dashboard/dialogs/common_dialogs.dart';
+import 'package:boom_dates_dashboard/models/app_model.dart';
+import 'package:boom_dates_dashboard/widgets/default_card_border.dart';
+import 'package:boom_dates_dashboard/widgets/show_scaffold_msg.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -147,7 +147,8 @@ class _InAppPurchasesState extends State<InAppPurchases> {
                               'assets/images/crow_badge_small.png',
                               width: 50,
                               height: 50),
-                          title: Text(AppModel().appInfo!.subscriptionIds[index],
+                          title: Text(
+                              AppModel().appInfo!.subscriptionIds[index],
                               style: TextStyle(fontSize: 18)),
                           trailing: IconButton(
                               icon: Icon(Icons.delete),
